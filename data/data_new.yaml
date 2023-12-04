@@ -1,0 +1,69 @@
+case_001_login:
+  - [{userAccount: admi13456789023451n,loginPwd: 123456},{code: '200', msg: 登录成功！, model: {}}]
+  - [{userAccount: admin,loginPwd: },{code: '400', msg: 登录密码不能为空！, model: {}}]
+  - [{userAccount: null,loginPwd: 123456},{code: '400', msg: 登录帐号不能为空！, model: {}}]
+  - [{userAccount: admin,loginPwd: 123456},{code: '200', msg: 登录成功！, model: {}}]
+
+case_002_user:
+  - [{ id: "",
+      userName: null,
+      userSex: 1,
+      userMobile: 131234564389832333298,
+      userEmail: '@qq.111111111com',
+      userAccount: 'null',
+      loginPwd: 111116,
+      confirmPwd: 111116},
+    {'code': '400', 'msg': '保存用户信息失败,登录帐号已存在！', 'model': {}}]
+  - [{ id: "777",
+      userName: class30xiaoli,
+      userSex: 1,
+      userMobile: 131234564389832333298,
+      userEmail: '111111111@qq.com',
+      userAccount: '@#$%^',
+      loginPwd: 111116,
+      confirmPwd: 111116},{'code': '200', 'msg': '保存用户信息成功！', 'model': {}}]
+  - [{ id: "",
+      userName: 'class30xiaoli',
+      userSex: 1,
+      userMobile: 131234564389832333298,
+      userEmail: ,
+      userAccount: 'null',
+      loginPwd: 111116,
+      confirmPwd: 111116 },{'code': '400', 'msg': '保存用户信息异常，请稍后再试！', 'model': {}}]
+  - [{ id: "",
+      userName: class30xiaoli,
+      userSex: 1,
+      userMobile: 131234564389832333298,
+      userEmail: '111111111@qq.com',
+      userAccount: '',
+      loginPwd: ,
+      confirmPwd:},{'code': '400', 'msg': '保存用户信息失败,登录帐号已存在！', 'model': {}}]
+  - [{ id: "",
+      userName: xiaoliaaa,
+      userSex: 1,
+      userMobile: 18813913812,
+      userEmail: '111111111@qq.com',
+      userAccount: "None",
+      loginPwd: 111116,
+      confirmPwd: 111116 },{'code': '400', 'msg': '保存用户信息失败,登录帐号已存在！', 'model': {}}]
+
+
+case_003_checkuser:
+  - [{ startCreateDate: "",
+      endCreateDate: "",
+      searchValue: "",
+      page: },{}]
+  - [{ startCreateDate: "",
+      endCreateDate: "",
+      searchValue: "",
+      page: "10000"},{}]
+  - [{ startCreateDate: "",
+      endCreateDate: "",
+      searchValue: "",
+      page: "1"},{}]
+
+
+case_004_deleteuser:
+  - [{ids: 'null'},{}]
+  - [{ids: 'None'}]
+  - [{ids: '10086'}]

@@ -1,0 +1,1 @@
+INFO     root:test_002_add_query_user.py:21 {'code': '400', 'msg': '保存用户信息异常，请稍后再试！', 'model': {}}

@@ -1,0 +1,1 @@
+INFO     root:test_002_add_query_user.py:21 {'code': '200', 'msg': '保存用户信息成功！', 'model': {}}
